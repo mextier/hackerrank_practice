@@ -1,11 +1,3 @@
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
 # Complete the compareTriplets function below.
 def compareTriplets(a, b):
     d = list(zip(a,b))
@@ -14,4 +6,3 @@ def compareTriplets(a, b):
     return (score1, score2)
 
 print(compareTriplets(list([20,20,30]),list([15,20,35])))
- 
