@@ -1,21 +1,13 @@
-import sys
+data = list(map(int,reversed("{0:b}".format(int(input())))))
+print(data)
 
-
-n = int(input())
-data = dict()
-for i in range(n):
-    s1, s2 = str(input()).split(" ")
-    data[s1] = s2
-keys_ = list()
-for line in sys.stdin:
-    line = line.rstrip('\r\n')
-    keys_.append(line)
-for key in keys_:
-    if key in data.keys():
-        print(f"{key}={data[key]}")
+max_ = 0
+seq = 0
+for i in data:
+    if i:
+        seq += 1
     else:
-        print("Not found")
+        seq = 0
+    max_ = max(max_,seq)
 
-
-
-
+print(max_)
